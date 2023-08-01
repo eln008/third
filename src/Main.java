@@ -1,17 +1,16 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Flower flower1 = new Flower("гортензия",1,40);
+        Flower flower2 = new Flower("гвоздика ",3,20);
+        Flower flower3 = new Flower("орхидея",2,30);
+        Flower flower4 = new Flower("ландыш",4,50);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        Flower[] flowers = new Flower []{flower1, flower2, flower3, flower4};
+        Flower expensive =  Flower.flowerMethod(flowers);
+        Flower fresh = Flower.flowerSvezhest(flowers);
+        System.out.println("Самые дорогие цветы: " + expensive.fname+" цена: "+expensive.price);
+        System.out.println("Самые свежие цветы: "+ fresh.fname+" цена: "+fresh.price);
     }
 }
